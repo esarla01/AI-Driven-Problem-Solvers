@@ -1,0 +1,35 @@
+Assignment 4: Sudoku Solver
+Goal: Create a program that fills in a sudoku game.
+
+In this assginment, I used different kinds of CSP techniques:
+
+1) Forward Checking
+
+First of all, for every empty spot, I stored all the possible values that slot can take and put that list to a dictionary named domain.  I accomplished this 
+scanning through all the empty slots on the row, column and square that a specific cell is located at. 
+
+
+2) Sudoku Specific Optimization
+
+For further optimization, I made sure that anytime a value from 1-9 was feasible for only one cell in a row, column, or square, I updated the cell on that board to contain that value. For example, if the slot on row 1 and column 2 could take 1, 5, and 6, but there was no other value that can take 1 on its row, then that slot was updated to be 1 regardless of the otgher legal values.
+
+
+3) Variable Ordering
+
+Secondly, after I stored the legal values of each slot (domains) on a dictionary, I sorted the
+legal value list of all cells in a way so that the values that had higher probability to be
+the solution were put on the front.
+
+This was done by calcuating the frequency of all legal values in the same row, column, and square that the cell was located at and then sorting based on that frequency list.
+
+Feeding legal values with higher probability of being the correct solution minimizes the time of back-tracking since the algorithm will back-track from a deeper level.
+
+
+4) Value Ordering
+
+Thirdly, the dictionary was sorted too, all the cells with less number of legal values were put
+up so that when the dept first search algorithm would explore those values first.
+
+
+
+Unfortunately, I was not able to focus on the formatting because I spent a lot of time on fixing a bug n my program and some personal issues. If I had more time I would try organizing all my code in a class so that I would get rid of global variables and have a better structure. 

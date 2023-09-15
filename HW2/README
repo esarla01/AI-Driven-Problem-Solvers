@@ -1,0 +1,19 @@
+Homework 2 - The Pancake Problem
+
+1)Find an the arrangement of pancakes that is in the from of [10, 9, 8, ..., 1] as you explore each possible arrangement through flipping the stack of 
+
+2) COST FUNCTION: The backward cost is the number of flips made to put the array into its current state.
+The backward cost is calculated during the creation of each flip arrangement of the nodes. 
+
+3) HEURISTIC FUNCTION: The forward cost is the number of pairs in the pancake stack that are not consequtive numbers.
+The forward cost is calculated in heuristic function where the number of gaps(non-consequtive pairs) are counted.
+
+Disclaimer:
+
+-The user must enter the array of numbers in the exact way that is explicitly explained in the program.
+
+-The program functions up until arrays with size 7. If an array of size larger than 7-8 is entered, the program takes extremely long and therefore it is not practical to be used on arrays of size 9 or more. Although the program says enter 10 consequtive numbers, it works with up until 7-8 elements and therefore put 7 elments max if you want to see the algorithm working. (Unfortunately, I could not debug my code and find the issue that cause it to fail for arrays over size 7 despite the days I've spent on this project. :( )
+
+4) Uniform Cost function can solve the smae problem for smaller sizes where the cost is the number of flips made to reach that state of array likewise A-Star.
+
+Conclusion: A-Star is a better algorithms than Uniform-Cost algorithm for the pancake problem because A-Star is able to solve larger pancake sets at a faster time compared to Uniform-Cost function. I observed this when I fed an array of size 7 to both algorithms. A-Star was able to solve the problem whereas the Uniform - Cost function failed.

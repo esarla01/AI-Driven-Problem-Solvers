@@ -1,0 +1,27 @@
+CS131 - Artificial Intelligence
+
+Behaviour Trees - Homework 1
+
+------Assumptions------
+
+Assumption (1): The robot doesn't spend more than 25% of its battery when performing 
+SPOT cleaning and GENERAL cleaning consequitvely. This means that the robot's battery will 
+never drop below 30% while it is executing any of the tasks.
+
+Assumption (2): The robot can find its home to go and charge even when it has 0% because it
+has a back-up battery that activates in such circumstances.
+
+Assumption (3): If the battery level is below 30%, the robots goes back to the dock to recharge. It
+recharges back to 100% after staying in dock for 3 secs. 
+
+Assumption (4): The percentage cost of battery for each specific task is not considered. Therefore, in the
+beginning of each loop, the user is asked for the battery level. Then, based on the input battery
+level, the tree executes accordingly. 
+
+(The reason why a cost for each individual task wasnt assigned is because in the homework desciption, except 
+for done general and done spot, tasks were described to do nothing other than printing statements and modifying 
+the state.)
+
+Assumption (5): The result of the clean-floor task is determined at random with a low probablity.
+
+

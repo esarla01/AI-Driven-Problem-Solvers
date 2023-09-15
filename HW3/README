@@ -1,0 +1,46 @@
+CS131 - Artificial Intelligence
+
+Genetic Algorithms - Homework 3
+
+Notes on the Success:
+The program takes an input number as for the number of indiviuals in first generation.
+The best in initial population is any number around 200 people because the algorithm's
+output converges around that initial population. After running the program on 200 individuals,
+for many times, the program outputted an individual with a fitness value of 43 or 44 and this 
+combination of items in the backpack had an exact weight of 250.
+
+
+Overview:
+
+Chromosome/Genome:
+An array of size 12 represents an individual. Each slot in the array has either 1 or 0 for each
+item in the backpack. 1 implies that the corresponding individual in the array exists and 0
+implies that is absent.
+
+Fitness Value:
+The fitness values of individuals are calculated based on two criteria. If the total weight of 
+the items in a combination/indiviual is equal to or belo 250, the fitness value is sum of the 
+importance values of items in the backpack. If the total weight is above 250, a penalty is applied
+because any combination of items/individual with a total weight hiogher than 250 is not desired.
+
+First Generation:
+The program initially creates a population that consists of with random individuals. Each individual
+is created based on a randomly populating the slot of an array with size 12 with either 0 or 1. The number of individuals in the first generation is determined based on the number that user enter in the terminal.
+
+New Generations with Evolution:
+Pairs of individuals are seleted from the population. These pairs undergo cross-over on a random point in the
+chromosome. Then, each individual undergo mutation based on a probability of 0.5 on a random slot in their 
+chromosome (that slot becomes 0 if 1 and vice versa). The individual with the best fitness value in the past 
+generation is added to the current generation (which is an elitist approach) to speed up the algotihm. Finally,
+the generation is cut in half and the half with worse fitness values eliminated.
+
+Termination:
+The evolution happens untill either 1 individual is left in the population or the evolution repeats over 30
+times. When either one of these conditions are met, the individual with the best fitness value is returned.
+
+
+
+
+
+
+
