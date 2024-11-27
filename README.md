@@ -1,6 +1,6 @@
 # AI Problem Solvers (CS131 Tufts)
 
-This repository contains a collection of projects completed as part of the **CS131 course** at **Tufts University**. The focus of these projects is on solving well-known problems using **artificial intelligence techniques**, with all implementations built from scratch. The goal is to explore AI concepts through hands-on problem-solving without relying on external libraries.
+This repository contains a collection of projects completed as part of the **CS131 course** at **Tufts University**. The focus of these projects is on solving well-known problems using **artificial intelligence concepts**, with all implementations built from scratch. The goal is to explore AI concepts through hands-on problem-solving without relying on external libraries.
 
 ## Projects
 
